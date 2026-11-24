@@ -1,0 +1,41 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.9.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Fabric Loom: 1.15.5
+
+> Task :compileJava
+/home/runner/work/Pack-Opener/Pack-Opener/pokemon-pack-opener/src/main/java/com/example/pokemonpackopener/Sfx.java:22: error: incompatible types: Holder<SoundEvent> cannot be converted to SoundEvent
+        Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(ev, pitch, c.soundVolume));
+                                                                                 ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error
+
+> Task :compileJava FAILED
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/build-1795561578691.json
+
+[Incubating] Problems report is available at: file:///home/runner/work/Pack-Opener/Pack-Opener/pokemon-pack-opener/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  /home/runner/work/Pack-Opener/Pack-Opener/pokemon-pack-opener/src/main/java/com/example/pokemonpackopener/Sfx.java:22: error: incompatible types: Holder<SoundEvent> cannot be converted to SoundEvent
+          Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(ev, pitch, c.soundVolume));
+                                                                                   ^
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  1 error
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.9.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 14s
+1 actionable task: 1 executed
