@@ -18,7 +18,13 @@ jobs:
           gradle-version: current
       - name: Build
         working-directory: pokemon-pack-opener
-        run: gradle build --no-daemon
+        run: |
+          set +e
+          gradle build --no-daemon > build.log 2>&1
+          code=$?
+          echo "=========== ERRORS ==========="
+          grep -n -A6 "error:" build.log || tail -n 60 build.log
+          exit $code
       - uses: actions/upload-artifact@v4
         with:
           name: pokemon-pack-opener-jar
