@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "pokemon_pack_opener",
+  "version": "${version}",
+  "name": "Pokémon Money Pack Opener",
+  "description": "A client-side Pokémon booster-pack opening simulator with animated reveals, rarity effects and configurable $ values. Built for DonutSMP players. Purely visual: it never touches your real server balance.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.pokemonpackopener.PackOpenerClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.1",
+    "minecraft": "26.1.x",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
